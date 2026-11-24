@@ -1,0 +1,43 @@
+[
+  {
+    "kernel": "con-ron",
+    "command": [
+      "/workspace/scratch/c870fd343b81/lean_runtime/lean-4.36.0-linux/bin/con-ron",
+      "--verified",
+      "--jobs=4",
+      "/workspace/scratch/c870fd343b81/transfer/verification/generated/solution.ndjson"
+    ],
+    "export_sha256": "93d951ebc3cbdbe3c0817d4606a6961339399210c4c2ba43198c90030f2355a0",
+    "started_utc": "2026-11-24T15:55:11.058838+00:00",
+    "log": "verification/kernel-con-ron.log",
+    "exit_code": 0,
+    "finished_utc": "2026-11-24T15:56:28.088176+00:00"
+  },
+  {
+    "kernel": "nanoda",
+    "command": [
+      "/workspace/scratch/c870fd343b81/lean_runtime/lean-4.36.0-linux/bin/nanoda_bin",
+      "/workspace/scratch/c870fd343b81/transfer/verification/generated/nanoda.json"
+    ],
+    "export_sha256": "93d951ebc3cbdbe3c0817d4606a6961339399210c4c2ba43198c90030f2355a0",
+    "started_utc": "2026-11-24T15:56:29.269772+00:00",
+    "log": "verification/kernel-nanoda.log",
+    "exit_code": 0,
+    "finished_utc": "2026-11-24T15:56:52.538286+00:00"
+  },
+  {
+    "kernel": "lean",
+    "command": [
+      "./lakew",
+      "env",
+      "leanchecker",
+      "--from-export",
+      "/workspace/scratch/c870fd343b81/transfer/verification/generated/solution.ndjson"
+    ],
+    "export_sha256": "93d951ebc3cbdbe3c0817d4606a6961339399210c4c2ba43198c90030f2355a0",
+    "started_utc": "2026-11-24T15:56:53.149514+00:00",
+    "log": "verification/kernel-lean.log",
+    "exit_code": 0,
+    "finished_utc": "2026-11-24T15:59:05.827336+00:00"
+  }
+]

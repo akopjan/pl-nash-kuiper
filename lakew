@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -euo pipefail
+# Use an explicitly selected toolchain, an installed Lake (normally managed
+# by elan), or the adjacent runtime used for this workspace's verification.
+project_root=$(cd "$(dirname "$0")" && pwd)
+if [ -n "${LEAN_BIN:-}" ]; then
+  export PATH="$LEAN_BIN:$PATH"
+elif ! command -v lake >/dev/null 2>&1; then
+  adjacent_runtime="$project_root/../lean_runtime/lean-4.36.0-linux/bin"
+  if [ ! -x "$adjacent_runtime/lake" ]; then
+    echo "Install the toolchain in lean-toolchain with elan, or set LEAN_BIN." >&2
+    exit 1
+  fi
+  export PATH="$adjacent_runtime:$PATH"
+fi
+exec lake "$@"

@@ -1,0 +1,7 @@
+Publication metadata is not ready:
+- formalization.yaml:project.authors: [] should be non-empty
+- formalization.yaml:project.license: '' should be non-empty
+- formalization.yaml: project.authors needs true, nonempty names
+- formalization.yaml: project.responsible_maintainers needs true, nonempty names
+- formalization.yaml: project.license requires an authorized SPDX identifier
+- LICENSE: no project licence has been selected

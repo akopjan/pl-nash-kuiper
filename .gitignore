@@ -1,0 +1,7 @@
+/.lake/
+/.cache/
+/docbuild/.lake/
+__pycache__/
+*.pyc
+/verification/generated/
+/.DS_Store

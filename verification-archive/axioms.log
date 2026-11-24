@@ -1,0 +1,26 @@
+PLGeometry.brehm_akopyan_tarasov (κ : PLGeometry.Geometry) (n : ℕ) (A : Finset (PLGeometry.Model κ n))
+  (f : PLGeometry.Model κ n → PLGeometry.Model κ n) (hf : ∀ x ∈ A, ∀ y ∈ A, dist (f x) (f y) ≤ dist x y) :
+  ∃ F, LipschitzWith 1 F ∧ PLGeometry.PLIsometry κ n F ∧ ∀ x ∈ A, F x = f x
+PLGeometry.pl_nash_kuiper_euclidean.{u} {d n : ℕ} (hdn : d ≤ n) (P : Type u) [MetricSpace P]
+  (hP : PLGeometry.IsFinitePolyhedron PLGeometry.Geometry.euclidean d P)
+  (f : P → PLGeometry.Model PLGeometry.Geometry.euclidean n) (hf : LipschitzWith 1 f) {ε : ℝ} (hε : 0 < ε) :
+  ∃ g, LipschitzWith 1 g ∧ PLGeometry.PLIsometry PLGeometry.Geometry.euclidean n g ∧ ∀ (x : P), dist (g x) (f x) < ε
+PLGeometry.pl_nash_kuiper_spherical.{u} {d n : ℕ} (hdn : d ≤ n) (P : Type u) [MetricSpace P]
+  (hP : PLGeometry.IsFinitePolyhedron PLGeometry.Geometry.spherical d P)
+  (f : P → PLGeometry.Model PLGeometry.Geometry.spherical n) (hf : LipschitzWith 1 f)
+  (hs : PLGeometry.StrictlyShort f ∨ ∃ p, ∀ (x : P), dist (f x) p ≤ Real.pi / 2) {ε : ℝ} (hε : 0 < ε) :
+  ∃ g, LipschitzWith 1 g ∧ PLGeometry.PLIsometry PLGeometry.Geometry.spherical n g ∧ ∀ (x : P), dist (g x) (f x) < ε
+PLGeometry.pl_nash_kuiper_hyperbolic.{u} {d n : ℕ} (hdn : d ≤ n) (P : Type u) [MetricSpace P]
+  (hP : PLGeometry.IsFinitePolyhedron PLGeometry.Geometry.hyperbolic d P)
+  (f : P → PLGeometry.Model PLGeometry.Geometry.hyperbolic n) (hf : LipschitzWith 1 f) {ε : ℝ} (hε : 0 < ε) :
+  ∃ g, LipschitzWith 1 g ∧ PLGeometry.PLIsometry PLGeometry.Geometry.hyperbolic n g ∧ ∀ (x : P), dist (g x) (f x) < ε
+'PLGeometry.brehm_akopyan_tarasov' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PLGeometry.pl_nash_kuiper_euclidean' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PLGeometry.pl_nash_kuiper_spherical' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PLGeometry.pl_nash_kuiper_hyperbolic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BrehmApprox.euclideanBrehm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BrehmApprox.sphericalBrehm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BrehmApprox.hyperbolicBrehm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PLGeometry.FiniteChartedComplex.exists_protected_net' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PLGeometry.FiniteChartedComplex.hasSmallFiniteFolding' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PLGeometry.IsFinitePolyhedron.exists_small_plIsometry' depends on axioms: [propext, Classical.choice, Quot.sound]

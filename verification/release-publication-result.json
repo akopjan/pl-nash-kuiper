@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "scripts/check-publication.py"
+  ],
+  "started_utc": "2026-11-24T16:26:52.429464+00:00",
+  "finished_utc": "2026-11-24T16:26:52.612257+00:00",
+  "exit_code": 1,
+  "log": "verification/release-publication.log",
+  "output_identical_to_known_missing_owner_metadata_report": true,
+  "unexpected_metadata_errors": []
+}

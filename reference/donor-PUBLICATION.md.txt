@@ -1,0 +1,78 @@
+# Palomar publication record
+
+The project contains complete Lean proofs of the four public declarations
+and the six auxiliary model metric laws selected by `comparator.json`. The full project build and all public theorem axiom
+audits passed using Lean 4.36.0. This package has not been submitted to Palomar.
+
+## Public challenge
+
+`Challenge.lean` is a standalone statement file importing only Mathlib.
+It contains the concrete model metrics, geodesic simplex and triangulation
+definitions, the intrinsic source metric, the definition of a PL-isometry,
+the Brehm–Akopyan–Tarasov extension theorem, and the three PL Nash–Kuiper
+statements. Its ten deliberate proof holes are the statement-side metric
+lemmas and theorem declarations. The proof side imports no Challenge module
+and has no proof holes or geometric axioms.
+
+`Solution.lean` exports proofs of all four declarations. Their complete
+transitive axiom lists are exactly `propext`, `Classical.choice`, and
+`Quot.sound`. The source definitions and theorem hypotheses remain explicit;
+in particular, the spherical approximation theorem includes its strictness
+or closed-hemisphere condition.
+
+## Recorded verification
+
+`verification/lean-version.txt` records the installed compiler version.
+`verification/build.log` records the complete successful project build.
+`verification/axioms.log` includes the public theorem types and the axiom
+reports for the extension, protected-net, and finite-folding constructions.
+`verification/solution-check.log` records the successful audit of all ten obligations.
+`verification/results.json` records each command's timestamps and exit code.
+`verification/sources.sha256` identifies the distributed sources.
+
+The standard Comparator command was attempted. Its nested `bubblewrap`
+sandbox failed to start in this workspace with `Failed to mount tmpfs: No
+such file or directory`. The exact attempt is recorded in
+`verification/comparator-sandbox.log` and its adjacent result JSON. The local
+run uses the documented `--inadvisably-no-sandbox` option and requests the
+bundled NanoDa and con-ron checkers; its result is recorded separately in
+`verification/comparator-local.log` and `verification/comparator-local-result.json`.
+The local run exited successfully for all ten obligations: statement matching,
+con-ron, NanoDa, and Lean's default kernel all accepted the solution.
+This local run is not a sandboxed Palomar acceptance certificate.
+
+The GitHub Actions workflow retains the standard sandboxed Comparator check.
+Run `./scripts/verify-comparator.sh` on a supported Linux host before submission.
+The submitted `comparator.json` retains all four public targets, all six
+metric-law obligations, and exactly the three standard logical axioms. External-kernel registration is supplied by
+the verification runner, as required by the registry protocol.
+
+## Publication information requiring an owner
+
+The supplied files do not establish the formalization authors' names, the
+responsible maintainer's name, or an authorized project licence.
+`project.authors`, `project.responsible_maintainers`, and `project.license` in
+`formalization.yaml` are therefore empty. The metadata validator reports
+those fields and the missing root `LICENSE` file.
+
+Fill the two name fields with the actual credited people. Select an
+authorized SPDX licence identifier and add the corresponding `LICENSE` text.
+Third-party notices and licences are already recorded separately in
+`THIRD_PARTY_NOTICES.md` and `licenses/`.
+
+## Submission sequence
+
+1. Complete the authorship, maintainer, and licence fields and the root
+   `LICENSE` file. Run `python3 scripts/check-publication.py`.
+2. Reproduce the proof checks with `python3 verify.py` and run the standard
+   sandboxed Comparator with `./scripts/verify-comparator.sh`.
+3. Put the checked source package in the intended public GitHub repository.
+   Commit the dependency lockfile and record the full 40-character commit hash.
+4. Submit that repository and immutable commit through
+   <https://submit.palomar-registry.org/>.
+
+The project includes the pinned toolchain, dependency lockfile, metadata
+schema, source checks, theorem audit, Comparator configuration, CI workflow,
+proof guide, and the recorded verification evidence. The compiler binaries
+and Mathlib cache are installed during reproduction and are not included in
+the source archive.

@@ -1,0 +1,18 @@
+/-- PL Nash--Kuiper--Gromov approximation (Akopyan, 2010, Thms. 3.7,
+3.17, 3.18): every short map from a finite polyhedral space is uniformly
+approximable by PL-isometries. In the spherical case, require uniform strict
+shortness or containment of the image in an open hemisphere. -/
+theorem akopyan_pl_nash_kuiper (κ : Geometry) {d m n : ℕ}
+    (hdn : d ≤ n) (K : Polyhedron κ d m)
+    (f : ↥K.K.space → Model κ n)
+    (hf : Lipschitz K f 1)
+    (hsphere : κ = .spherical →
+      ((∃ L : ℝ≥0, L < 1 ∧ Lipschitz K f L) ∨
+       ∃ o : Model κ n, ∀ x,
+         modelDist κ n (f x) o < Real.pi / 2))
+    {ε : ℝ} (hε : 0 < ε) :
+    ∃ g : ↥K.K.space → Model κ n,
+      PLIsometry K g ∧
+      ∀ x, modelDist κ n (g x) (f x) < ε := by
+  sorry
+

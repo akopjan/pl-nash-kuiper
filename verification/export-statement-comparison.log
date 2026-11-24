@@ -1,0 +1,3 @@
+Original target statements and all referenced definitions match.
+Transitive target dependencies use only propext, Quot.sound and Classical.choice.
+Read-only export comparison passed; sandboxed Comparator is a separate check.

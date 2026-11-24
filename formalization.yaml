@@ -1,0 +1,100 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/v0.4.schema.json
+version: "v0.4"
+
+project:
+  name: "Akopyan's PL Nash–Kuiper–Gromov theorem"
+  description: >-
+    Let P be a finite polyhedral space with compatible simplex charts of
+    constant curvature κ ∈ {−1,0,1}, let d be the chart dimension, and let
+    n ≥ d. Every short map from P to the corresponding n-dimensional model
+    should admit a uniformly close PL-isometry. In the spherical case the
+    Challenge additionally assumes uniform strict shortness or that the image
+    lies in an open hemisphere.
+  authors:
+    - "Arseniy Akopyan"
+  license: "Apache-2.0"
+  responsible_maintainers:
+    - "Arseniy Akopyan"
+
+classification:
+  arxiv: ["math.MG", "cs.LO"]
+  msc2020: ["51F30", "51M10", "51M20", "68V20"]
+
+sources:
+  - title: "Дискретные трансверсали выпуклых множеств (Discrete transversals of convex sets)"
+    authors: ["Arseniy V. Akopyan"]
+    id: "https://search.rsl.ru/ru/record/01004895074"
+    type: "dissertation"
+    location: "Moscow, 2010, 75 pp.; Chapter 3, Theorems 3.7, 3.17, 3.18"
+    relationship: "formalizes"
+    author_endorsement: "participated"
+  - title: "Extensions of distance reducing mappings to piecewise congruent mappings on R^m"
+    authors: ["Ulrich Brehm"]
+    id: "doi:10.1007/BF01917587"
+    type: "article"
+    location: "Journal of Geometry 16 (1981), 187–193"
+    relationship: "formalizes"
+  - title: "A Constructive Proof of Kirszbraun's Theorem"
+    authors: ["Arseniy V. Akopyan", "Aleksey S. Tarasov"]
+    id: "doi:10.1134/S000143460811014X"
+    type: "article"
+    location: "Mathematical Notes 84 (2008), 725–728"
+    relationship: "formalizes"
+  - title: "A PL-analogue of the Nash–Kuiper theorem"
+    authors: ["Arseniy V. Akopyan"]
+    id: "https://www.moebiuscontest.ru/files/2007/akopyan.pdf"
+    type: "preprint"
+    location: "2007"
+    relationship: "background"
+  - title: "Lectures on piecewise distance preserving maps"
+    authors: ["Anton Petrunin", "Allan Yashinski"]
+    id: "arxiv:1405.6606v3"
+    type: "preprint"
+    location: "2014"
+    relationship: "background"
+
+status:
+  scope: >-
+    Let P be a finite polyhedral space with compatible simplex charts of
+    constant curvature κ ∈ {−1,0,1}, let d be the chart dimension, and let
+    n ≥ d. Every short map from P to the corresponding n-dimensional model
+    admits a uniformly close PL-isometry. In the spherical case the
+    Challenge assumes uniform strict shortness or that the image lies in an
+    open hemisphere. Formalized in PLGeometry.akopyan_pl_nash_kuiper without
+    sorry or extra axioms.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms:
+    - "propext"
+    - "Classical.choice"
+    - "Quot.sound"
+  main_results:
+    - declaration: "PLGeometry.akopyan_pl_nash_kuiper"
+      file: "Solution.lean"
+      sorry_count: 0
+      axioms:
+        - "propext"
+        - "Classical.choice"
+        - "Quot.sound"
+      comparator_config: "comparator.json"
+
+automation:
+  methods:
+    - method: "agent"
+      models: ["ChatGPT"]
+      framework: "AI-assisted Lean 4 formalization"
+      tool_setup: >-
+        Formalization and proof development in Lean 4.36.0 with Mathlib
+        assisted by ChatGPT.
+
+review:
+  status: "self-assessed"
+
+alignment:
+  namespace: "PLGeometry"
+  statements:
+    - source: "Akopyan (2010), Chapter 3, Theorems 3.7, 3.17, 3.18"
+      lean: "PLGeometry.akopyan_pl_nash_kuiper"
+      module: "Challenge"
+      proof_module: "Solution"
+      status: "proved"

@@ -1,0 +1,132 @@
+{
+  "purpose": "Full build of the extracted source ZIP with zero initial project build artifacts",
+  "started_utc": "2026-11-24T15:55:17.465375+00:00",
+  "input_archive": "/workspace/scratch/c870fd343b81/artifacts/akopyan_palomar_transfer.zip",
+  "reproduction_root": "/workspace/scratch/c870fd343b81/reproduction/akopyan_palomar_transfer",
+  "external_dependencies": "/workspace/scratch/c870fd343b81/transfer/.lake/packages",
+  "commands": [
+    {
+      "command": [
+        "./lakew",
+        "env",
+        "lean",
+        "--version"
+      ],
+      "working_directory": "/workspace/scratch/c870fd343b81/reproduction/akopyan_palomar_transfer",
+      "started_utc": "2026-11-24T15:55:17.607288+00:00",
+      "log": "verification/reproduction-lean-version.log",
+      "finished_utc": "2026-11-24T15:55:20.484412+00:00",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "scripts/check-contract.py"
+      ],
+      "working_directory": "/workspace/scratch/c870fd343b81/reproduction/akopyan_palomar_transfer",
+      "started_utc": "2026-11-24T15:55:20.484998+00:00",
+      "log": "verification/reproduction-contract.log",
+      "finished_utc": "2026-11-24T15:55:21.149652+00:00",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "./lakew",
+        "build"
+      ],
+      "working_directory": "/workspace/scratch/c870fd343b81/reproduction/akopyan_palomar_transfer",
+      "started_utc": "2026-11-24T15:55:21.152611+00:00",
+      "log": "verification/reproduction-build.log",
+      "finished_utc": "2026-11-24T16:04:42.104160+00:00",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "scripts/check-solution.py",
+        "--lake",
+        "./lakew"
+      ],
+      "working_directory": "/workspace/scratch/c870fd343b81/reproduction/akopyan_palomar_transfer",
+      "started_utc": "2026-11-24T16:04:42.109541+00:00",
+      "log": "verification/reproduction-solution-audit.log",
+      "finished_utc": "2026-11-24T16:04:55.585322+00:00",
+      "exit_code": 0
+    }
+  ],
+  "archive_sha256": "22ceb9790f97055ab9cb52935a4dfd2dd744b8492856fea6f7662fd1c2d89b95",
+  "archive_size_bytes": 903685,
+  "extracted_file_count": 446,
+  "extracted_manifest_sha256": "651d65dfb8c5839ba4ed0844bb749d7655e9506e366e0d9d6dcb860babd7cdf3",
+  "proof_source_file_count": 345,
+  "proof_source_manifest_sha256": "c56fbecbcc1deae2ed02e66ed55c0392405b69110b7fbffed3fa919db554f8a1",
+  "initial_project_compiled_artifacts": [],
+  "initial_project_build_directory_exists": false,
+  "dependency_revisions": [
+    {
+      "name": "mathlib",
+      "manifest_revision": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+      "actual_revision": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842"
+    },
+    {
+      "name": "plausible",
+      "manifest_revision": "054b228ce0ac61d767c6e71ba73a24728f191b72",
+      "actual_revision": "054b228ce0ac61d767c6e71ba73a24728f191b72"
+    },
+    {
+      "name": "LeanSearchClient",
+      "manifest_revision": "4fb58e749ef3fc0395fe274f6cab70c2ea85f1c9",
+      "actual_revision": "4fb58e749ef3fc0395fe274f6cab70c2ea85f1c9"
+    },
+    {
+      "name": "importGraph",
+      "manifest_revision": "8370c640afcd1cc3fb1cb9bf1560cc66eafee5e0",
+      "actual_revision": "8370c640afcd1cc3fb1cb9bf1560cc66eafee5e0"
+    },
+    {
+      "name": "proofwidgets",
+      "manifest_revision": "2f0f3520daeac2d9310ff25b7a877a0e5cdaa203",
+      "actual_revision": "2f0f3520daeac2d9310ff25b7a877a0e5cdaa203"
+    },
+    {
+      "name": "aesop",
+      "manifest_revision": "66ff77cf0c4c898799e4b94d14db55f7a02d0c5a",
+      "actual_revision": "66ff77cf0c4c898799e4b94d14db55f7a02d0c5a"
+    },
+    {
+      "name": "Qq",
+      "manifest_revision": "ff055a2fcc835935e0ae607339b455a5f5896b4b",
+      "actual_revision": "ff055a2fcc835935e0ae607339b455a5f5896b4b"
+    },
+    {
+      "name": "batteries",
+      "manifest_revision": "b4b25a3886a16daacaf6615c2eea7170a6e8f458",
+      "actual_revision": "b4b25a3886a16daacaf6615c2eea7170a6e8f458"
+    },
+    {
+      "name": "Cli",
+      "manifest_revision": "50810f72af7618bee62fe9800dc26e806c188703",
+      "actual_revision": "50810f72af7618bee62fe9800dc26e806c188703"
+    }
+  ],
+  "cpu_affinity": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "environment_overrides": {
+    "LEAN_BIN": "/workspace/scratch/c870fd343b81/lean_runtime/lean-4.36.0-linux/bin",
+    "LEAN_NUM_THREADS": "4",
+    "LAKE_NO_CACHE": "true",
+    "LAKE_ARTIFACT_CACHE": "false",
+    "LAKE_RESTORE_ARTIFACTS": "false",
+    "LAKE_CACHE_DIR": "/workspace/scratch/c870fd343b81/reproduction/empty-lake-artifact-cache"
+  },
+  "proof_sources_unchanged_during_build": true,
+  "proof_sources_equal_current_transfer": true,
+  "new_project_olean_count": 336,
+  "source_project_olean_reuse": false,
+  "overall_status": "passed",
+  "finished_utc": "2026-11-24T16:04:55.661001+00:00"
+}

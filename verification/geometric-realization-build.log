@@ -1,0 +1,50 @@
+⚠ [18288/18379] Replayed PLGeometry.ClosedCellGluing
+warning: PLGeometry/ClosedCellGluing.lean:28:0: automatically included section variable(s) unused in theorem `ArchivePLGeometry.FiniteClosedCover.glue_eq`:
+  [TopologicalSpace Y]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [TopologicalSpace Y] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [18312/18379] Replayed BrehmApprox.EuclideanBarycentricSimplex
+warning: BrehmApprox/EuclideanBarycentricSimplex.lean:40:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [18314/18379] Replayed BrehmApprox.SphericalBarycentricSimplex
+warning: BrehmApprox/SphericalBarycentricSimplex.lean:57:0: automatically included section variable(s) unused in theorem `BrehmApprox.SphericalBarycentric.vertex_injective`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [18318/18379] Built BrehmApprox.GluedApproximation (5.0s)
+✖ [18320/18379] Building Compatibility.Original (6.5s)
+trace: .> LEAN_PATH=/workspace/scratch/c870fd343b81/transfer/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/c870fd343b81/transfer/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/c870fd343b81/transfer/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/c870fd343b81/transfer/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/c870fd343b81/transfer/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/c870fd343b81/transfer/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/c870fd343b81/transfer/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/c870fd343b81/transfer/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/c870fd343b81/transfer/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/c870fd343b81/transfer/.lake/build/lib/lean /workspace/scratch/c870fd343b81/lean_runtime/lean-4.36.0-linux/bin/lean /workspace/scratch/c870fd343b81/transfer/Compatibility/Original.lean -o /workspace/scratch/c870fd343b81/transfer/.lake/build/lib/lean/Compatibility/Original.olean -i /workspace/scratch/c870fd343b81/transfer/.lake/build/lib/lean/Compatibility/Original.ilean -c /workspace/scratch/c870fd343b81/transfer/.lake/build/ir/Compatibility/Original.c --setup /workspace/scratch/c870fd343b81/transfer/.lake/build/ir/Compatibility/Original.setup.json --json
+error: Compatibility/Original.lean:101:22: unexpected token '('; expected ',' or binderPred
+✔ [18324/18379] Built BrehmApprox.IntrinsicChains (7.5s)
+✔ [18326/18379] Built BrehmApprox.HyperbolicProjection (23s)
+✔ [18332/18379] Built PLGeometry.Basic (13s)
+⚠ [18334/18379] Replayed PLGeometry.ChartedComplex
+warning: PLGeometry/ChartedComplex.lean:33:26: Variable name `hσ` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hσ
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PLGeometry/ChartedComplex.lean:133:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [18336/18379] Built BrehmApprox.HyperbolicFoldingGeometry (32s)
+✔ [18338/18379] Built PLGeometry.Dimension (43s)
+✔ [18340/18379] Built PLGeometry.ChartedIncidence (69s)
+✔ [18342/18379] Built BrehmApprox.HyperbolicGeodesics (129s)
+✔ [18344/18379] Built BrehmApprox.HyperbolicConvexProjection (131s)

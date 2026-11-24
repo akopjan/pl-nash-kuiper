@@ -1,0 +1,84 @@
+{
+  "scope": "Root package-name metadata correction only; no Lean source, dependency pin/option, target, or proof-export change",
+  "changed_utc": "2026-11-24T16:10:00.952522+00:00",
+  "copies": [
+    {
+      "copy": "project",
+      "root": "/workspace/scratch/c870fd343b81/transfer",
+      "changed_field": "name",
+      "name_before": "brehm_approx",
+      "name_after": "akopyan_palomar_transfer",
+      "manifest_sha256_before": "abb7a26c7ecdd5c96ceb0efb5c3374f7bf349d18d495c2d09c4c50d12ee88c4e",
+      "manifest_sha256_after": "91e5a8bb93b30c939f8155fc8acf3d62cf808cb3409e989349b8740373ce53a1",
+      "original_manifest_snapshot": "verification/final-package-manifest-before-project.json",
+      "only_root_name_changed": true,
+      "dependency_list_unchanged": true,
+      "dependency_count": 9,
+      "dependency_records_sha256": "8fa80069c5cb43c46d7fa845b31408da199044b6ec0c76e22dc3e5e1ad593c28",
+      "lean_file_count": 341,
+      "lean_sources_sha256_before": "4cdb926b70962711dabda6be571ca6c31b45861710ce9e4f88491758b02df65c",
+      "lean_sources_sha256_after": "4cdb926b70962711dabda6be571ca6c31b45861710ce9e4f88491758b02df65c",
+      "lean_hashes_unchanged": true,
+      "lean_changed_paths": [],
+      "build": {
+        "command": [
+          "./lakew",
+          "build"
+        ],
+        "cwd": "/workspace/scratch/c870fd343b81/transfer",
+        "environment": {
+          "LEAN_BIN": "/workspace/scratch/c870fd343b81/lean_runtime/lean-4.36.0-linux/bin"
+        },
+        "started_utc": "2026-11-24T16:10:14.447178+00:00",
+        "log": "verification/final-package-config-project-build.log",
+        "exit_code": 0,
+        "finished_utc": "2026-11-24T16:10:22.124380+00:00"
+      },
+      "lean_sources_sha256_after_build": "4cdb926b70962711dabda6be571ca6c31b45861710ce9e4f88491758b02df65c",
+      "lean_hashes_unchanged_after_build": true,
+      "manifest_sha256_after_build": "91e5a8bb93b30c939f8155fc8acf3d62cf808cb3409e989349b8740373ce53a1"
+    },
+    {
+      "copy": "reproduction",
+      "root": "/workspace/scratch/c870fd343b81/reproduction/akopyan_palomar_transfer",
+      "changed_field": "name",
+      "name_before": "brehm_approx",
+      "name_after": "akopyan_palomar_transfer",
+      "manifest_sha256_before": "abb7a26c7ecdd5c96ceb0efb5c3374f7bf349d18d495c2d09c4c50d12ee88c4e",
+      "manifest_sha256_after": "91e5a8bb93b30c939f8155fc8acf3d62cf808cb3409e989349b8740373ce53a1",
+      "original_manifest_snapshot": "verification/final-package-manifest-before-reproduction.json",
+      "only_root_name_changed": true,
+      "dependency_list_unchanged": true,
+      "dependency_count": 9,
+      "dependency_records_sha256": "8fa80069c5cb43c46d7fa845b31408da199044b6ec0c76e22dc3e5e1ad593c28",
+      "lean_file_count": 341,
+      "lean_sources_sha256_before": "4cdb926b70962711dabda6be571ca6c31b45861710ce9e4f88491758b02df65c",
+      "lean_sources_sha256_after": "4cdb926b70962711dabda6be571ca6c31b45861710ce9e4f88491758b02df65c",
+      "lean_hashes_unchanged": true,
+      "lean_changed_paths": [],
+      "build": {
+        "command": [
+          "./lakew",
+          "build"
+        ],
+        "cwd": "/workspace/scratch/c870fd343b81/reproduction/akopyan_palomar_transfer",
+        "environment": {
+          "LEAN_BIN": "/workspace/scratch/c870fd343b81/lean_runtime/lean-4.36.0-linux/bin"
+        },
+        "started_utc": "2026-11-24T16:10:14.448130+00:00",
+        "log": "verification/final-package-config-reproduction-build.log",
+        "exit_code": 0,
+        "finished_utc": "2026-11-24T16:10:22.333413+00:00"
+      },
+      "lean_sources_sha256_after_build": "4cdb926b70962711dabda6be571ca6c31b45861710ce9e4f88491758b02df65c",
+      "lean_hashes_unchanged_after_build": true,
+      "manifest_sha256_after_build": "91e5a8bb93b30c939f8155fc8acf3d62cf808cb3409e989349b8740373ce53a1"
+    }
+  ],
+  "completed_utc": "2026-11-24T16:10:22.333680+00:00",
+  "passed": true,
+  "project_and_reproduction_lean_sources_identical": true,
+  "verified_proof_export_sha256": "93d951ebc3cbdbe3c0817d4606a6961339399210c4c2ba43198c90030f2355a0",
+  "proof_export_unchanged": true,
+  "historical_kernel_export_manifest_retained": true
+}

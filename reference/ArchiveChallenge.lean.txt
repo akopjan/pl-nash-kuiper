@@ -1,0 +1,229 @@
+module
+
+public import Mathlib
+
+/-!
+# Piecewise isometric extension and approximation
+
+The model spaces have curvature `0`, `1`, and `-1`. Their distances are the
+Euclidean norm, the angle between unit vectors, and the hyperboloid distance.
+A triangulation below consists of genuine geodesic simplices, meets along
+faces, and is locally finite. The source metric in the approximation theorems
+is its intrinsic cell-chain metric. No initial folding is assumed.
+
+The theorem proofs and the metric-law proofs in this statement file are
+deliberate Challenge holes. The matching Solution must supply every proof.
+-/
+
+@[expose] public section
+noncomputable section
+
+open scoped BigOperators InnerProductSpace
+open InnerProductGeometry
+
+/-- The round unit sphere, with angular rather than chordal distance. -/
+structure GeodesicSphere (n : ℕ) where
+  val : EuclideanSpace ℝ (Fin (n + 1))
+  norm_val : ‖val‖ = 1
+
+namespace GeodesicSphere
+
+theorem eq_of_angle_eq_zero {n : ℕ} {x y : GeodesicSphere n}
+    (h : angle x.val y.val = 0) : x = y := by sorry
+
+theorem val_ne_zero {n : ℕ} (x : GeodesicSphere n) : x.val ≠ 0 := by sorry
+
+instance {n : ℕ} : MetricSpace (GeodesicSphere n) where
+  dist x y := angle x.val y.val
+  dist_self x := angle_self x.val_ne_zero
+  dist_comm x y := angle_comm x.val y.val
+  dist_triangle x y z := angle_le_angle_add_angle x.val y.val z.val
+  eq_of_dist_eq_zero := eq_of_angle_eq_zero
+
+end GeodesicSphere
+
+namespace BrehmApprox.Hyperboloid
+
+variable {E : Type*} [NormedAddCommGroup E] [InnerProductSpace ℝ E]
+
+/-- The positive time coordinate of a future unit Lorentz vector. -/
+def height (x : E) : ℝ := Real.sqrt (1 + ‖x‖ ^ 2)
+
+def coshDist (x y : E) : ℝ := height x * height y - ⟪x, y⟫_ℝ
+
+def distance (x y : E) : ℝ := Real.arcosh (coshDist x y)
+
+theorem distance_self (x : E) : distance x x = 0 := by sorry
+
+theorem distance_comm (x y : E) : distance x y = distance y x := by sorry
+
+theorem distance_triangle (x y z : E) :
+    distance x z ≤ distance x y + distance y z := by sorry
+
+theorem distance_eq_zero_iff (x y : E) : distance x y = 0 ↔ x = y := by sorry
+
+end BrehmApprox.Hyperboloid
+
+namespace BrehmApprox
+
+/-- Hyperbolic space in spatial coordinates on the future unit hyperboloid. -/
+structure HyperbolicSpace (n : ℕ) where
+  point : EuclideanSpace ℝ (Fin n)
+
+namespace HyperbolicSpace
+
+instance {n : ℕ} : MetricSpace (HyperbolicSpace n) where
+  dist x y := Hyperboloid.distance x.point y.point
+  dist_self x := Hyperboloid.distance_self x.point
+  dist_comm x y := Hyperboloid.distance_comm x.point y.point
+  dist_triangle x y z := Hyperboloid.distance_triangle x.point y.point z.point
+  eq_of_dist_eq_zero {x y} h := by
+    have hp := (Hyperboloid.distance_eq_zero_iff _ _).mp h
+    cases x
+    cases y
+    congr
+
+def lift {n : ℕ} (x : HyperbolicSpace n) : ℝ × EuclideanSpace ℝ (Fin n) :=
+  (Hyperboloid.height x.point, x.point)
+
+end HyperbolicSpace
+
+/-- The positive spherical hull of the vertices. -/
+def sphericalCell {n : ℕ} (V : Finset (GeodesicSphere n)) : Set (GeodesicSphere n) :=
+  {x | ∃ w : GeodesicSphere n → ℝ, (∀ v ∈ V, 0 ≤ w v) ∧
+    ∃ a : ℝ, 0 < a ∧ ∑ v ∈ V, w v • v.val = a • x.val}
+
+def InOpenHemisphere {n : ℕ} (V : Finset (GeodesicSphere n)) : Prop :=
+  ∃ p : GeodesicSphere n, ∀ v ∈ V, 0 < inner ℝ p.val v.val
+
+/-- The positive Lorentz hull, intersected with the future unit hyperboloid. -/
+def hyperbolicCell {n : ℕ} (V : Finset (HyperbolicSpace n)) : Set (HyperbolicSpace n) :=
+  {x | ∃ w : HyperbolicSpace n → ℝ, (∀ v ∈ V, 0 ≤ w v) ∧
+    ∃ a : ℝ, 0 < a ∧
+      ∑ v ∈ V, w v • HyperbolicSpace.lift v = a • HyperbolicSpace.lift x}
+
+end BrehmApprox
+
+namespace ArchivePLGeometry
+
+universe u
+
+/-- The Euclidean, spherical, and hyperbolic model geometries. -/
+inductive Geometry where
+  | euclidean
+  | spherical
+  | hyperbolic
+
+/-- The `n`-dimensional model space. -/
+abbrev Model : Geometry → ℕ → Type
+  | .euclidean, n => EuclideanSpace ℝ (Fin n)
+  | .spherical, n => GeodesicSphere n
+  | .hyperbolic, n => BrehmApprox.HyperbolicSpace n
+
+instance modelMetric (κ : Geometry) (n : ℕ) : MetricSpace (Model κ n) := by
+  cases κ <;> exact inferInstance
+
+/-- Geodesic convex hull, with spherical hulls restricted below to hemispheres. -/
+def hull (κ : Geometry) (n : ℕ) : Finset (Model κ n) → Set (Model κ n) :=
+  match κ with
+  | .euclidean => fun V => convexHull ℝ (V : Set (EuclideanSpace ℝ (Fin n)))
+  | .spherical => BrehmApprox.sphericalCell
+  | .hyperbolic => BrehmApprox.hyperbolicCell
+
+/-- Nondegenerate simplex vertices; the empty simplex is allowed. -/
+def simplexVertices (κ : Geometry) (n : ℕ) : Finset (Model κ n) → Prop :=
+  match κ with
+  | .euclidean => fun V =>
+      AffineIndependent ℝ (fun v : (V : Set (EuclideanSpace ℝ (Fin n))) => v.val)
+  | .spherical => fun V => BrehmApprox.InOpenHemisphere V ∧
+      LinearIndependent ℝ (fun v : (V : Set (GeodesicSphere n)) => v.val.val)
+  | .hyperbolic => fun V =>
+      LinearIndependent ℝ (fun v : (V : Set (BrehmApprox.HyperbolicSpace n)) =>
+        BrehmApprox.HyperbolicSpace.lift v.val)
+
+local instance definitionsLocalInstance1 (α : Type*) : DecidableEq α := Classical.decEq α
+
+/-- A locally finite geodesic triangulation. Each simplex has its own isometric
+chart. Face compatibility is imposed in the source, without a global folding. -/
+structure Triangulation (κ : Geometry) (n : ℕ) (P : Type u) [MetricSpace P] where
+  simplices : Set (Finset P)
+  cell : Finset P → Set P
+  chart : Finset P → P → Model κ n
+  cover : ∀ x : P, ∃ σ ∈ simplices, x ∈ cell σ
+  locallyFinite : LocallyFinite (fun σ : simplices => cell σ.val)
+  vertices_mem : ∀ σ ∈ simplices, (σ : Set P) ⊆ cell σ
+  simplex : ∀ σ ∈ simplices, simplexVertices κ n (σ.image (chart σ))
+  image_cell : ∀ σ ∈ simplices, chart σ '' cell σ = hull κ n (σ.image (chart σ))
+  isometry_cell : ∀ σ ∈ simplices, ∀ x ∈ cell σ, ∀ y ∈ cell σ,
+    dist (chart σ x) (chart σ y) = dist x y
+  faces : ∀ σ ∈ simplices, ∀ τ ⊆ σ, τ ∈ simplices
+  image_face : ∀ σ ∈ simplices, ∀ τ ⊆ σ,
+    chart σ '' cell τ = hull κ n (τ.image (chart σ))
+  intersection : ∀ σ ∈ simplices, ∀ τ ∈ simplices, cell σ ∩ cell τ = cell (σ ∩ τ)
+
+/-- The metric is the infimum of lengths of finite chains within simplices. -/
+def Intrinsic {κ : Geometry} {n : ℕ} {P : Type u} [MetricSpace P]
+    (T : Triangulation κ n P) : Prop :=
+  ∀ x y : P, ∀ ε : ℝ, 0 < ε →
+    ∃ m : ℕ, ∃ z : ℕ → P, z 0 = x ∧ z m = y ∧
+      (∀ j < m, ∃ σ ∈ T.simplices, z j ∈ T.cell σ ∧ z (j + 1) ∈ T.cell σ) ∧
+      (∑ j ∈ Finset.range m, dist (z j) (z (j + 1))) < dist x y + ε
+
+/-- A finite intrinsic polyhedral space of curvature `κ` and dimension at most `n`. -/
+def IsFinitePolyhedron (κ : Geometry) (n : ℕ) (P : Type u) [MetricSpace P] : Prop :=
+  ∃ T : Triangulation κ n P, T.simplices.Finite ∧ Intrinsic T
+
+/-- A PL-isometry is continuous and isometric on each simplex of some locally
+finite geodesic triangulation. It need not be injective on the whole source. -/
+def PLIsometry {P : Type u} [MetricSpace P] (κ : Geometry) (n : ℕ)
+    (f : P → Model κ n) : Prop :=
+  Continuous f ∧ ∃ T : Triangulation κ n P,
+    ∀ σ ∈ T.simplices, ∀ x ∈ T.cell σ, ∀ y ∈ T.cell σ,
+      dist (f x) (f y) = dist x y
+
+/-- Strict shortness has a single global Lipschitz constant below one. -/
+def StrictlyShort {P Q : Type*} [MetricSpace P] [MetricSpace Q] (f : P → Q) : Prop :=
+  ∃ L : NNReal, L < 1 ∧ LipschitzWith L f
+
+/-- **Brehm–Akopyan–Tarasov.** Finite short data extend to a global PL-isometry
+in the same dimension and geometry. The hyperbolic case is included. -/
+theorem brehm_akopyan_tarasov (κ : Geometry) (n : ℕ)
+    (A : Finset (Model κ n)) (f : Model κ n → Model κ n)
+    (hf : ∀ x ∈ A, ∀ y ∈ A, dist (f x) (f y) ≤ dist x y) :
+    ∃ F : Model κ n → Model κ n,
+      LipschitzWith 1 F ∧ PLIsometry κ n F ∧ ∀ x ∈ A, F x = f x := by
+  sorry
+
+/-- **Euclidean PL Nash–Kuiper.** A short map from a finite intrinsic Euclidean
+polyhedron admits arbitrarily close finite piecewise isometric approximations. -/
+theorem pl_nash_kuiper_euclidean {d n : ℕ} (hdn : d ≤ n)
+    (P : Type u) [MetricSpace P] (hP : IsFinitePolyhedron .euclidean d P)
+    (f : P → Model .euclidean n) (hf : LipschitzWith 1 f) {ε : ℝ} (hε : 0 < ε) :
+    ∃ g : P → Model .euclidean n,
+      LipschitzWith 1 g ∧ PLIsometry .euclidean n g ∧
+      ∀ x, dist (g x) (f x) < ε := by
+  sorry
+
+/-- **Spherical PL Nash–Kuiper.** Strict shortness, or containment of the image
+in a closed hemisphere, suffices for uniform piecewise isometric approximation. -/
+theorem pl_nash_kuiper_spherical {d n : ℕ} (hdn : d ≤ n)
+    (P : Type u) [MetricSpace P] (hP : IsFinitePolyhedron .spherical d P)
+    (f : P → Model .spherical n) (hf : LipschitzWith 1 f)
+    (hs : StrictlyShort f ∨ ∃ p : Model .spherical n, ∀ x, dist (f x) p ≤ Real.pi / 2)
+    {ε : ℝ} (hε : 0 < ε) :
+    ∃ g : P → Model .spherical n,
+      LipschitzWith 1 g ∧ PLIsometry .spherical n g ∧
+      ∀ x, dist (g x) (f x) < ε := by
+  sorry
+
+/-- **Hyperbolic PL Nash–Kuiper.** Every short map from a finite intrinsic
+hyperbolic polyhedron has arbitrarily close piecewise isometric approximations. -/
+theorem pl_nash_kuiper_hyperbolic {d n : ℕ} (hdn : d ≤ n)
+    (P : Type u) [MetricSpace P] (hP : IsFinitePolyhedron .hyperbolic d P)
+    (f : P → Model .hyperbolic n) (hf : LipschitzWith 1 f) {ε : ℝ} (hε : 0 < ε) :
+    ∃ g : P → Model .hyperbolic n,
+      LipschitzWith 1 g ∧ PLIsometry .hyperbolic n g ∧
+      ∀ x, dist (g x) (f x) < ε := by
+  sorry
+
+end ArchivePLGeometry

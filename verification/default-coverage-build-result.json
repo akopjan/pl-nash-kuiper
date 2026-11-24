@@ -1,0 +1,12 @@
+{
+  "command": [
+    "./lakew",
+    "build"
+  ],
+  "purpose": "Validate default coverage of ArchiveSolution, Compatibility.GeometricRefinement and Compatibility.PLContinuity",
+  "started_utc": "2026-11-24T16:07:06.785829+00:00",
+  "lakefile_sha256": "7a5efcd0068857608b755eb8bb4c0b8982306a7814226d80c1110d1070eb94b4",
+  "log": "verification/default-coverage-build.log",
+  "exit_code": 0,
+  "finished_utc": "2026-11-24T16:07:25.440908+00:00"
+}

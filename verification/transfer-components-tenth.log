@@ -1,0 +1,67 @@
+Compatibility/SourceComponents.lean:42:22: warning: Variable name `hy` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hy
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Compatibility/SourceComponents.lean:84:0: warning: automatically included section variable(s) unused in theorem `PLGeometry.Compatibility.CellComponents.compact_component`:
+  [T2Space P]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [T2Space P] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Compatibility/SourceComponents.lean:94:0: warning: automatically included section variable(s) unused in theorem `PLGeometry.Compatibility.CellComponents.restricted_cover`:
+  [Finite ι]
+  [TopologicalSpace P]
+  [T2Space P]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Finite ι] [TopologicalSpace P] [T2Space P] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Compatibility/SourceComponents.lean:199:4: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+Compatibility/SourceComponents.lean:201:34: warning: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+Compatibility/SourceComponents.lean:229:52: warning: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+Compatibility/SourceComponents.lean:251:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+Compatibility/SourceComponents.lean:276:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+Compatibility/SourceComponents.lean:293:2: error: Tactic `subst` failed: did not find equation for eliminating 'c'
+
+κ : Geometry
+n : ℕ
+P : Type u
+inst✝¹ : TopologicalSpace P
+inst✝ : T2Space P
+U : FiniteChartedComplex κ n P
+Y : Type u_1
+f : (c : U.ComponentIndex) → U.IndexedComponent c → Y
+c : U.ComponentIndex
+x : P
+hx : PLGeometry.Compatibility.CellComponents.Joined (fun σ => U.cell ↑σ) (Quotient.out c) x
+he : U.componentIndex ↑⟨x, hx⟩ = c
+⊢ U.glueComponents f ↑⟨x, hx⟩ = f c ⟨x, hx⟩

@@ -1,0 +1,70 @@
+{
+  "checked_utc": "2026-11-24T15:59:28.316898+00:00",
+  "lean_toolchain": "leanprover/lean4:v4.36.0",
+  "packages": [
+    {
+      "name": "mathlib",
+      "expected_revision": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+      "actual_revision": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+      "tracked_source_changes": [],
+      "passed": true
+    },
+    {
+      "name": "plausible",
+      "expected_revision": "054b228ce0ac61d767c6e71ba73a24728f191b72",
+      "actual_revision": "054b228ce0ac61d767c6e71ba73a24728f191b72",
+      "tracked_source_changes": [],
+      "passed": true
+    },
+    {
+      "name": "LeanSearchClient",
+      "expected_revision": "4fb58e749ef3fc0395fe274f6cab70c2ea85f1c9",
+      "actual_revision": "4fb58e749ef3fc0395fe274f6cab70c2ea85f1c9",
+      "tracked_source_changes": [],
+      "passed": true
+    },
+    {
+      "name": "importGraph",
+      "expected_revision": "8370c640afcd1cc3fb1cb9bf1560cc66eafee5e0",
+      "actual_revision": "8370c640afcd1cc3fb1cb9bf1560cc66eafee5e0",
+      "tracked_source_changes": [],
+      "passed": true
+    },
+    {
+      "name": "proofwidgets",
+      "expected_revision": "2f0f3520daeac2d9310ff25b7a877a0e5cdaa203",
+      "actual_revision": "2f0f3520daeac2d9310ff25b7a877a0e5cdaa203",
+      "tracked_source_changes": [],
+      "passed": true
+    },
+    {
+      "name": "aesop",
+      "expected_revision": "66ff77cf0c4c898799e4b94d14db55f7a02d0c5a",
+      "actual_revision": "66ff77cf0c4c898799e4b94d14db55f7a02d0c5a",
+      "tracked_source_changes": [],
+      "passed": true
+    },
+    {
+      "name": "Qq",
+      "expected_revision": "ff055a2fcc835935e0ae607339b455a5f5896b4b",
+      "actual_revision": "ff055a2fcc835935e0ae607339b455a5f5896b4b",
+      "tracked_source_changes": [],
+      "passed": true
+    },
+    {
+      "name": "batteries",
+      "expected_revision": "b4b25a3886a16daacaf6615c2eea7170a6e8f458",
+      "actual_revision": "b4b25a3886a16daacaf6615c2eea7170a6e8f458",
+      "tracked_source_changes": [],
+      "passed": true
+    },
+    {
+      "name": "Cli",
+      "expected_revision": "50810f72af7618bee62fe9800dc26e806c188703",
+      "actual_revision": "50810f72af7618bee62fe9800dc26e806c188703",
+      "tracked_source_changes": [],
+      "passed": true
+    }
+  ],
+  "passed": true
+}

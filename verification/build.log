@@ -1,0 +1,957 @@
+⚠ [18283/18530] Replayed BrehmApprox.ExtremeBarycentricSupport
+warning: BrehmApprox/ExtremeBarycentricSupport.lean:5:0: 'Mathlib.Data.Real.Basic' has been deprecated: please replace this import by
+
+import Mathlib.Basic.Real.Basic
+⚠ [18307/18530] Replayed BrehmApprox.FiniteSelectionRigidity
+warning: BrehmApprox/FiniteSelectionRigidity.lean:62:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BrehmApprox/FiniteSelectionRigidity.lean:66:7: `ContinuousOn.restrict` has been deprecated: Use `ContinuousOn.domRestrict` instead
+warning: BrehmApprox/FiniteSelectionRigidity.lean:66:33: `ContinuousOn.restrict` has been deprecated: Use `ContinuousOn.domRestrict` instead
+⚠ [18335/18657] Replayed PLGeometry.ClosedCellGluing
+warning: PLGeometry/ClosedCellGluing.lean:28:0: automatically included section variable(s) unused in theorem `ArchivePLGeometry.FiniteClosedCover.glue_eq`:
+  [TopologicalSpace Y]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [TopologicalSpace Y] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [18346/18926] Replayed PLGeometry.FaceEnumeration
+warning: PLGeometry/FaceEnumeration.lean:26:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: PLGeometry/FaceEnumeration.lean:33:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [18397/18926] Replayed BrehmApprox.EuclideanBarycentricSimplex
+warning: BrehmApprox/EuclideanBarycentricSimplex.lean:40:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [18399/18926] Replayed BrehmApprox.SphericalBarycentricSimplex
+warning: BrehmApprox/SphericalBarycentricSimplex.lean:57:0: automatically included section variable(s) unused in theorem `BrehmApprox.SphericalBarycentric.vertex_injective`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [18403/18926] Replayed PLGeometry.ChartedComplex
+warning: PLGeometry/ChartedComplex.lean:33:26: Variable name `hσ` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hσ
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PLGeometry/ChartedComplex.lean:133:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [18404/18926] Replayed PLGeometry.BarycentricRealization
+warning: PLGeometry/BarycentricRealization.lean:97:21: This simp argument is unused:
+  i.property
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [restrict, a]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PLGeometry/BarycentricRealization.lean:116:10: This simp argument is unused:
+  Pi.single_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hj]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PLGeometry/BarycentricRealization.lean:140:16: This simp argument is unused:
+  Pi.single_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [vertex, hne, Ne.symm hne] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PLGeometry/BarycentricRealization.lean:140:38: This simp argument is unused:
+  Ne.symm hne
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [vertex, Pi.single_apply, hne] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [18429/18926] Replayed Challenge
+warning: Challenge.lean:124:8: declaration uses `sorry`
+✔ [18438/18926] Built BrehmApprox.MetricSupport (5.6s)
+✔ [18464/18926] Built BrehmApprox.SphereGeodesicExistence (5.6s)
+⚠ [18483/18926] Replayed PLGeometry.IntrinsicRefinement
+warning: PLGeometry/IntrinsicRefinement.lean:153:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [18486/18926] Replayed PLGeometry.ChartedContinuity
+warning: PLGeometry/ChartedContinuity.lean:48:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [18488/18926] Replayed Compatibility.IntrinsicMetric
+warning: Compatibility/IntrinsicMetric.lean:38:0: automatically included section variable(s) unused in theorem `PLGeometry.Compatibility.FoldedMetric.compact_star`:
+  [T2Space P]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [T2Space P] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Compatibility/IntrinsicMetric.lean:42:0: automatically included section variable(s) unused in theorem `PLGeometry.Compatibility.FoldedMetric.compact_opposite`:
+  [T2Space P]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [T2Space P] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Compatibility/IntrinsicMetric.lean:81:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: Compatibility/IntrinsicMetric.lean:85:13: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: Compatibility/IntrinsicMetric.lean:86:12: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: Compatibility/IntrinsicMetric.lean:122:0: automatically included section variable(s) unused in theorem `PLGeometry.Compatibility.FoldedMetric.dist_le_chain_dist`:
+  [TopologicalSpace P]
+  [T2Space P]
+  [Finite ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [TopologicalSpace P] [T2Space P] [Finite ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Compatibility/IntrinsicMetric.lean:157:0: automatically included section variable(s) unused in theorem `PLGeometry.Compatibility.FoldedMetric.source_compactSpace`:
+  [T2Space P]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [T2Space P] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Compatibility/IntrinsicMetric.lean:168:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Compatibility/IntrinsicMetric.lean:189:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Compatibility/IntrinsicMetric.lean:190:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Compatibility/IntrinsicMetric.lean:229:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Compatibility/IntrinsicMetric.lean:284:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Compatibility/IntrinsicMetric.lean:291:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Compatibility/IntrinsicMetric.lean:308:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [18489/18926] Replayed Compatibility.ModelDimension
+warning: Compatibility/ModelDimension.lean:56:34: This simp argument is unused:
+  Function.comp_def
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Set.image_image, modelEmbedding, Equiv.apply_symm_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [18496/18926] Built BrehmApprox.DisjointStages (5.8s)
+⚠ [18512/18926] Replayed Compatibility.SourceComponents
+warning: Compatibility/SourceComponents.lean:42:22: Variable name `hy` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hy
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Compatibility/SourceComponents.lean:84:0: automatically included section variable(s) unused in theorem `PLGeometry.Compatibility.CellComponents.compact_component`:
+  [T2Space P]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [T2Space P] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Compatibility/SourceComponents.lean:94:0: automatically included section variable(s) unused in theorem `PLGeometry.Compatibility.CellComponents.restricted_cover`:
+  [Finite ι]
+  [TopologicalSpace P]
+  [T2Space P]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Finite ι] [TopologicalSpace P] [T2Space P] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Compatibility/SourceComponents.lean:199:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Compatibility/SourceComponents.lean:201:34: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: Compatibility/SourceComponents.lean:229:52: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: Compatibility/SourceComponents.lean:251:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Compatibility/SourceComponents.lean:276:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [18516/18926] Replayed PLGeometry.ProtectedVoronoi
+warning: PLGeometry/ProtectedVoronoi.lean:163:44: Variable name `σ` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _σ
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [18518/18926] Replayed PLGeometry.ProtectedNetFinite
+warning: PLGeometry/ProtectedNetFinite.lean:21:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: PLGeometry/ProtectedNetFinite.lean:46:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [18525/18926] Built BrehmApprox.ExplicitSphericalOctants (6.5s)
+⚠ [18534/18926] Replayed Compatibility.SetRigidity
+warning: Compatibility/SetRigidity.lean:35:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Compatibility/SetRigidity.lean:36:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Compatibility/SetRigidity.lean:85:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Compatibility/SetRigidity.lean:86:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Compatibility/SetRigidity.lean:142:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Compatibility/SetRigidity.lean:143:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [18543/18926] Built BrehmApprox.SphereCounterexample (6.7s)
+✔ [18557/18926] Built BrehmApprox.SphericalLocalProjection (7.3s)
+⚠ [18558/18926] Replayed BrehmApprox.PositiveBarycentricGeometry
+warning: BrehmApprox/PositiveBarycentricGeometry.lean:32:0: automatically included section variable(s) unused in theorem `BrehmApprox.PositiveBarycentric.linearIndependent_of_mass_one`:
+  [Fintype J]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype J] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [18559/18926] Replayed Compatibility.SourceVertices
+warning: Compatibility/SourceVertices.lean:90:37: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+⚠ [18566/18926] Replayed BrehmApprox.HyperbolicBarycentricSimplex
+warning: BrehmApprox/HyperbolicBarycentricSimplex.lean:143:0: automatically included section variable(s) unused in theorem `BrehmApprox.HyperbolicBarycentric.vertex_injective`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BrehmApprox/HyperbolicBarycentricSimplex.lean:183:70: This simp argument is unused:
+  Prod.fst_smul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hz, zero_smul, Finset.sum_const_zero, Prod.fst_zero, HyperbolicSpace.lift, smul_eq_mul] at ht
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: BrehmApprox/HyperbolicBarycentricSimplex.lean:184:30: This simp argument is unused:
+  smul_eq_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hz, zero_smul, Finset.sum_const_zero, Prod.fst_zero, Prod.fst_smul, HyperbolicSpace.lift] at ht
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [18570/18926] Replayed PLGeometry.PolarNetData
+warning: PLGeometry/PolarNetData.lean:78:0: automatically included section variable(s) unused in theorem `ArchivePLGeometry.PolarNetData.radialDistance_pos`:
+  [TopologicalSpace L]
+  [T2Space L]
+  D
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [TopologicalSpace L] [T2Space L] D in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [18575/18926] Replayed BrehmApprox.PolytopeHalfspaces
+warning: BrehmApprox/PolytopeHalfspaces.lean:28:53: Unused tactic linter: `<;>` can be replaced with `;`.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: BrehmApprox/PolytopeHalfspaces.lean:28:53: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: BrehmApprox/PolytopeHalfspaces.lean:44:31: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: BrehmApprox/PolytopeHalfspaces.lean:37:0: automatically included section variable(s) unused in theorem `BrehmApprox.halfspaceSlice_mem_iff`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BrehmApprox/PolytopeHalfspaces.lean:57:17: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
+⚠ [18577/18926] Replayed BrehmApprox.ReweightingProjectiveGeometry
+warning: BrehmApprox/ReweightingProjectiveGeometry.lean:21:0: automatically included section variable(s) unused in theorem `BrehmApprox.BarycentricReweighting.diagonal_injective`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [18578/18926] Replayed Compatibility.SourceAtlas
+warning: Compatibility/SourceAtlas.lean:71:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Compatibility/SourceAtlas.lean:88:28: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: Compatibility/SourceAtlas.lean:125:25: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: Compatibility/SourceAtlas.lean:214:27: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp only [K.sourceCell_empty, Set.mem_inter_iff, Set.mem_empty_iff_false, false_and] at hx
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Compatibility/SourceAtlas.lean:218:27: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp only [K.sourceCell_empty, Set.mem_inter_iff, Set.mem_empty_iff_false, and_false] at hx
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [18582/18926] Replayed BrehmApprox.AffineArrangement
+warning: BrehmApprox/AffineArrangement.lean:76:0: automatically included section variable(s) unused in theorem `BrehmApprox.affineStratum_subset_weakCell`:
+  [FiniteDimensional ℝ E]
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BrehmApprox/AffineArrangement.lean:81:0: automatically included section variable(s) unused in theorem `BrehmApprox.convex_affineStratum`:
+  [FiniteDimensional ℝ E]
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BrehmApprox/AffineArrangement.lean:93:0: automatically included section variable(s) unused in theorem `BrehmApprox.isClosed_affineWeakCell`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BrehmApprox/AffineArrangement.lean:152:0: automatically included section variable(s) unused in theorem `BrehmApprox.affineWeakCell_eq_halfspaces`:
+  [FiniteDimensional ℝ E]
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BrehmApprox/AffineArrangement.lean:170:75: Unused tactic linter: `<;>` can be replaced with `;`.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: BrehmApprox/AffineArrangement.lean:170:75: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: BrehmApprox/AffineArrangement.lean:214:0: automatically included section variable(s) unused in theorem `BrehmApprox.isExtreme_affineWeakCell_inter`:
+  [FiniteDimensional ℝ E]
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BrehmApprox/AffineArrangement.lean:227:0: automatically included section variable(s) unused in theorem `BrehmApprox.isExtreme_affineWeakCell_inter_of_base`:
+  [FiniteDimensional ℝ E]
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BrehmApprox/AffineArrangement.lean:305:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [18585/18926] Replayed PLGeometry.BarycentricPolytopes
+warning: PLGeometry/BarycentricPolytopes.lean:25:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [18618/18926] Replayed BrehmApprox.IntegerCubeComplex
+warning: BrehmApprox/IntegerCubeComplex.lean:53:0: automatically included section variable(s) unused in theorem `BrehmApprox.integerCube_cover`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BrehmApprox/IntegerCubeComplex.lean:104:0: automatically included section variable(s) unused in theorem `BrehmApprox.isExtreme_integerCubes_inter`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [18620/18926] Replayed BrehmApprox.PolytopeArrangementCover
+warning: BrehmApprox/PolytopeArrangementCover.lean:68:0: automatically included section variable(s) unused in theorem `BrehmApprox.PolytopeCover.arrangementCell_locallyFinite`:
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [18626/18926] Replayed PLGeometry.ProtectedVoronoiPolytope
+warning: PLGeometry/ProtectedVoronoiPolytope.lean:79:0: automatically included section variable(s) unused in theorem `ArchivePLGeometry.VoronoiAtlas.voronoiPiece_face_inter`:
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PLGeometry/ProtectedVoronoiPolytope.lean:152:0: automatically included section variable(s) unused in theorem `ArchivePLGeometry.VoronoiAtlas.piece_cover`:
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [18634/18926] Replayed PLGeometry.SphericalComplexRealization
+warning: PLGeometry/SphericalComplexRealization.lean:50:0: automatically included section variable(s) unused in theorem `ArchivePLGeometry.Barycentric.image_univ_subtype`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PLGeometry/SphericalComplexRealization.lean:86:0: automatically included section variable(s) unused in theorem `ArchivePLGeometry.Barycentric.independent_image`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PLGeometry/SphericalComplexRealization.lean:121:0: automatically included section variable(s) unused in theorem `ArchivePLGeometry.Barycentric.SphericalData.labels_mem`:
+  D
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit D in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PLGeometry/SphericalComplexRealization.lean:126:0: automatically included section variable(s) unused in theorem `ArchivePLGeometry.Barycentric.SphericalData.vertices_labels`:
+  D
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit D in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PLGeometry/SphericalComplexRealization.lean:246:37: Unused tactic linter: `<;>` can be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: PLGeometry/SphericalComplexRealization.lean:246:41: Unused tactic linter: `congr 1` is never executed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: PLGeometry/SphericalComplexRealization.lean:246:49: Unused tactic linter: `<;>` can be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: PLGeometry/SphericalComplexRealization.lean:246:53: Unused tactic linter: `ext x` is never executed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: PLGeometry/SphericalComplexRealization.lean:246:59: Unused tactic linter: `<;>` can be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: PLGeometry/SphericalComplexRealization.lean:246:63: Unused tactic linter: `simp` is never executed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: PLGeometry/SphericalComplexRealization.lean:246:41: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: PLGeometry/SphericalComplexRealization.lean:246:53: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: PLGeometry/SphericalComplexRealization.lean:246:63: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [18640/18926] Replayed PLGeometry.VertexFolding
+warning: PLGeometry/VertexFolding.lean:141:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [18642/18926] Replayed PLGeometry.ModelProjectiveConverse
+warning: PLGeometry/ModelProjectiveConverse.lean:16:0: automatically included section variable(s) unused in theorem `ArchivePLGeometry.ModelBarycentric.affineIndependent_of_independent`:
+  [Fintype J]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype J] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [18656/18926] Replayed BrehmApprox.AffineSelectionCells
+warning: BrehmApprox/AffineSelectionCells.lean:37:0: automatically included section variable(s) unused in theorem `BrehmApprox.affineEquality_iff`:
+  [FiniteDimensional ℝ E]
+  [Fintype J]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] [Fintype J] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [18660/18926] Replayed PLGeometry.EuclideanExtension
+warning: PLGeometry/EuclideanExtension.lean:47:23: Unused tactic linter: `<;>` can be replaced with `;`.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: PLGeometry/EuclideanExtension.lean:47:33: Unused tactic linter: `<;>` can be replaced with `;`.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: PLGeometry/EuclideanExtension.lean:47:23: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: PLGeometry/EuclideanExtension.lean:47:33: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: PLGeometry/EuclideanExtension.lean:60:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [18667/18926] Replayed PLGeometry.ProtectedVoronoiTieComplex
+warning: PLGeometry/ProtectedVoronoiTieComplex.lean:67:0: automatically included section variable(s) unused in theorem `ArchivePLGeometry.VoronoiAtlas.tiePiece_source`:
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PLGeometry/ProtectedVoronoiTieComplex.lean:91:46: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+⚠ [18669/18926] Replayed PLGeometry.ProjectiveSimplicialRefinement
+warning: PLGeometry/ProjectiveSimplicialRefinement.lean:51:26: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: PLGeometry/ProjectiveSimplicialRefinement.lean:48:0: automatically included section variable(s) unused in theorem `ArchivePLGeometry.ProjectiveSimplexFamily.finite_simplices`:
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PLGeometry/ProjectiveSimplicialRefinement.lean:61:0: automatically included section variable(s) unused in theorem `ArchivePLGeometry.ProjectiveSimplexFamily.oldFace_spec`:
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PLGeometry/ProjectiveSimplicialRefinement.lean:80:0: automatically included section variable(s) unused in theorem `ArchivePLGeometry.ProjectiveSimplexFamily.cell_mono`:
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PLGeometry/ProjectiveSimplicialRefinement.lean:83:0: automatically included section variable(s) unused in theorem `ArchivePLGeometry.ProjectiveSimplexFamily.closed_cell`:
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PLGeometry/ProjectiveSimplicialRefinement.lean:90:0: automatically included section variable(s) unused in theorem `ArchivePLGeometry.ProjectiveSimplexFamily.vertices_mem`:
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PLGeometry/ProjectiveSimplicialRefinement.lean:93:0: automatically included section variable(s) unused in theorem `ArchivePLGeometry.ProjectiveSimplexFamily.simplex_independent`:
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PLGeometry/ProjectiveSimplicialRefinement.lean:139:0: automatically included section variable(s) unused in theorem `ArchivePLGeometry.ProjectiveSimplexFamily.faces`:
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PLGeometry/ProjectiveSimplicialRefinement.lean:147:0: automatically included section variable(s) unused in theorem `ArchivePLGeometry.ProjectiveSimplexFamily.cell_intersection`:
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [18671/18926] Replayed PLGeometry.ProtectedNetLinks
+warning: PLGeometry/ProtectedNetLinks.lean:31:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [18677/18926] Built BrehmApprox.CutoffStages (2.9s)
+⚠ [18681/18926] Replayed PLGeometry.ProjectiveFamilyVertexFolding
+warning: PLGeometry/ProjectiveFamilyVertexFolding.lean:24:0: automatically included section variable(s) unused in theorem `ArchivePLGeometry.ProjectiveSimplexFamily.cell_subset_oldCell`:
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [18687/18926] Built BrehmApprox.SphericalNaturality (9.0s)
+✔ [18705/18926] Built BrehmApprox.ExplicitBalancedFrame (4.3s)
+✔ [18706/18926] Built BrehmApprox.SphericalCutoffStages (11s)
+⚠ [18716/18926] Built BrehmApprox.CellChainPruning (23s)
+warning: BrehmApprox/CellChainPruning.lean:26:8: automatically included section variable(s) unused in theorem `BrehmApprox.CellChain.cells_nil`:
+  [MetricSpace P]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [MetricSpace P] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BrehmApprox/CellChainPruning.lean:28:8: automatically included section variable(s) unused in theorem `BrehmApprox.CellChain.cells_cons`:
+  [MetricSpace P]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [MetricSpace P] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [18717/18926] Built BrehmApprox.PreparedTheorems (18s)
+⚠ [18751/18926] Replayed PLGeometry.ProtectedNetInduction
+warning: PLGeometry/ProtectedNetInduction.lean:43:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [18755/18926] Replayed PLGeometry.EuclideanRadialIncidence
+warning: PLGeometry/EuclideanRadialIncidence.lean:80:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [18763/18926] Replayed BrehmApprox.SphericalRadialSupport
+warning: BrehmApprox/SphericalRadialSupport.lean:63:51: This simp argument is unused:
+  smul_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [map_add, map_smul, map_sum, hℓp, hℓq, zero_add, ht, smul_eq_mul, mul_zero, zero_add] at hh
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [18778/18926] Replayed Compatibility.ComponentRefinement
+warning: Compatibility/ComponentRefinement.lean:31:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [18780/18926] Built BrehmApprox.PiecewiseConsequences (23s)
+⚠ [18782/18926] Replayed PLGeometry.ProtectedVoronoiCones
+warning: PLGeometry/ProtectedVoronoiCones.lean:100:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [18784/18926] Replayed PLGeometry.VoronoiConeRefinement
+warning: PLGeometry/VoronoiConeRefinement.lean:67:0: automatically included section variable(s) unused in theorem `ArchivePLGeometry.VoronoiBaseFamily.oldSimplex_mem`:
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PLGeometry/VoronoiConeRefinement.lean:69:0: automatically included section variable(s) unused in theorem `ArchivePLGeometry.VoronoiBaseFamily.apex_mem_sites`:
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PLGeometry/VoronoiConeRefinement.lean:71:0: automatically included section variable(s) unused in theorem `ArchivePLGeometry.VoronoiBaseFamily.apex_mem_old`:
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PLGeometry/VoronoiConeRefinement.lean:94:0: automatically included section variable(s) unused in theorem `ArchivePLGeometry.VoronoiBaseFamily.base_subset_piece`:
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PLGeometry/VoronoiConeRefinement.lean:130:0: automatically included section variable(s) unused in theorem `ArchivePLGeometry.VoronoiBaseFamily.coordinate_cone`:
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PLGeometry/VoronoiConeRefinement.lean:170:0: automatically included section variable(s) unused in theorem `ArchivePLGeometry.VoronoiBaseFamily.coordinate_base_intersection`:
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PLGeometry/VoronoiConeRefinement.lean:249:8: automatically included section variable(s) unused in theorem `_private.PLGeometry.VoronoiConeRefinement.0.ArchivePLGeometry.VoronoiBaseFamily.singleton_intersection`:
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [18794/18926] Replayed PLGeometry.VoronoiBaseTransport
+warning: PLGeometry/VoronoiBaseTransport.lean:35:0: automatically included section variable(s) unused in theorem `ArchivePLGeometry.composed_image`:
+  [FiniteDimensional ℝ E]
+  [LinearOrder E]
+  [TopologicalSpace Q]
+  [T2Space Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] [LinearOrder E] [TopologicalSpace Q] [T2Space Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [18831/18926] Replayed PLGeometry.HyperbolicRadialIncidence
+warning: PLGeometry/HyperbolicRadialIncidence.lean:101:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [18845/18926] Replayed Compatibility.PLRefinement
+warning: Compatibility/PLRefinement.lean:28:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Compatibility/PLRefinement.lean:30:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Compatibility/PLRefinement.lean:57:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Compatibility/PLRefinement.lean:59:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Compatibility/PLRefinement.lean:89:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Compatibility/PLRefinement.lean:91:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [18849/18926] Replayed PLGeometry.VoronoiConeVertexMap
+warning: PLGeometry/VoronoiConeVertexMap.lean:40:21: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PLGeometry/VoronoiConeVertexMap.lean:52:23: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PLGeometry/VoronoiConeVertexMap.lean:53:23: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+⚠ [18865/18926] Replayed PLGeometry.HyperbolicPolarCoordinates
+warning: PLGeometry/HyperbolicPolarCoordinates.lean:135:4: Unused tactic linter: `change
+  dist (conePoint .hyperbolic n (T.chart σ p) (T.hyperbolicAngularChart p σ u) r)
+      (conePoint .hyperbolic n (T.chart σ p) (T.hyperbolicAngularChart p σ v) s) <
+    ε` does not change the goal.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [18880/18926] Replayed Compatibility.ConnectedApproximation
+warning: Compatibility/ConnectedApproximation.lean:47:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [18884/18926] Replayed Compatibility.Transfer
+warning: Compatibility/Transfer.lean:39:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [18892/18926] Built BrehmApprox.HyperbolicRefinement (21s)
+✔ [18894/18926] Built BrehmApprox.SourceStages (17s)
+✔ [18896/18926] Built BrehmApprox.SimplexLinkChart (18s)
+✔ [18898/18926] Built BrehmApprox.SphericalRefinement (21s)
+✔ [18900/18926] Built BrehmApprox.HyperbolicFlattening (22s)
+✔ [18902/18926] Built BrehmApprox.SpherePolyhedronObstruction (6.4s)
+✔ [18904/18926] Built BrehmApprox.RankedStages (6.8s)
+✔ [18906/18926] Built BrehmApprox.PiecewiseLength (7.4s)
+✔ [18908/18926] Built BrehmApprox.HyperbolicCutoff (6.4s)
+✔ [18910/18926] Built BrehmApprox.SphericalLinkChart (13s)
+✔ [18912/18926] Built BrehmApprox.SimplicialRanks (3.7s)
+✔ [18914/18926] Built BrehmApprox.ExplicitFourOctantSource (4.9s)
+✔ [18916/18926] Built BrehmApprox.ExplicitInfiniteFiber (3.2s)
+✔ [18918/18926] Built BrehmApprox.ExplicitFourOctantCompact (3.3s)
+✔ [18920/18926] Built BrehmApprox.ExplicitSourceGeodesics (5.1s)
+✔ [18922/18926] Built BrehmApprox.ExplicitSourceComplex (4.6s)
+✔ [18924/18926] Built BrehmApprox (38s)
+Build completed successfully (18926 jobs).

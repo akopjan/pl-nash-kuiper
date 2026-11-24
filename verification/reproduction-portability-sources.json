@@ -1,0 +1,80 @@
+{
+  "checkout-commit.json": {
+    "url": "https://api.github.com/repos/actions/checkout/commits/3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "http_status": "200",
+    "curl_exit_code": 0,
+    "checked_utc": "2026-11-24T16:05:10.126798+00:00",
+    "content_sha256": "71e489cd40d0dd7eace46b8b85d12384fd5e53310dc8149b198db481770bce18",
+    "commit": "3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "title": "prep v7.0.1 release (#2531)",
+    "commit_utc": "2026-07-17T18:45:11Z",
+    "html_url": "https://github.com/actions/checkout/commit/3d3c42e5aac5ba805825da76410c181273ba90b1"
+  },
+  "lean-action-commit.json": {
+    "url": "https://api.github.com/repos/leanprover/lean-action/commits/38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9",
+    "http_status": "200",
+    "curl_exit_code": 0,
+    "checked_utc": "2026-11-24T16:05:10.216867+00:00",
+    "content_sha256": "61c4c89ce9eb0ef1c80dd3cc0c976db83ef3838db958b0bd8e3355788c2582bc",
+    "commit": "38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9",
+    "title": "fix: use `lake test` if `test.sh` is missing from lean4checker (#160)",
+    "commit_utc": "2026-04-22T01:02:58Z",
+    "html_url": "https://github.com/leanprover/lean-action/commit/38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9"
+  },
+  "checkout-action.yml": {
+    "url": "https://raw.githubusercontent.com/actions/checkout/3d3c42e5aac5ba805825da76410c181273ba90b1/action.yml",
+    "http_status": "200",
+    "curl_exit_code": 0,
+    "checked_utc": "2026-11-24T16:05:09.447835+00:00",
+    "content_sha256": "d59219cb79590abdb877deaa14e3b65a00c05318bf5a6f3b989b9162b5d08c35"
+  },
+  "lean-action-action.yml": {
+    "url": "https://raw.githubusercontent.com/leanprover/lean-action/38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9/action.yml",
+    "http_status": "200",
+    "curl_exit_code": 0,
+    "checked_utc": "2026-11-24T16:05:09.534262+00:00",
+    "content_sha256": "6580d3e13284cb16407ca2b6ad8ec3ab02e5c96978d95a34ffd3427c98d10c00"
+  },
+  "lean-action-README.md": {
+    "url": "https://raw.githubusercontent.com/leanprover/lean-action/38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9/README.md",
+    "http_status": "200",
+    "curl_exit_code": 0,
+    "checked_utc": "2026-11-24T16:05:15.390967+00:00",
+    "content_sha256": "68f581bf7b9ac85500bf7aa0c5499fcea6f0d49bd230f9192eec83c0a8cf6d12"
+  },
+  "checkout-README.md": {
+    "url": "https://raw.githubusercontent.com/actions/checkout/3d3c42e5aac5ba805825da76410c181273ba90b1/README.md",
+    "http_status": "200",
+    "curl_exit_code": 0,
+    "checked_utc": "2026-11-24T16:05:15.372144+00:00",
+    "content_sha256": "3df94d90d0df6df603a549cc779bc6cab4b21f8deef82eb6fef1f4d88b788174"
+  },
+  "install_elan.sh": {
+    "url": "https://raw.githubusercontent.com/leanprover/lean-action/38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9/scripts/install_elan.sh",
+    "http_status": "200",
+    "curl_exit_code": 0,
+    "checked_utc": "2026-11-24T16:05:34.383689+00:00",
+    "content_sha256": "5fdee37f7e5bd00e49b15611fac0ef37d8103f7b9106924c9be34863def54c8c"
+  },
+  "config.sh": {
+    "url": "https://raw.githubusercontent.com/leanprover/lean-action/38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9/scripts/config.sh",
+    "http_status": "200",
+    "curl_exit_code": 0,
+    "checked_utc": "2026-11-24T16:05:34.294311+00:00",
+    "content_sha256": "53cf8aefd5fd6171b7a87a5a6cec0af56f8af780051470a4f4555e08825fa90c"
+  },
+  "detect_mathlib.sh": {
+    "url": "https://raw.githubusercontent.com/leanprover/lean-action/38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9/scripts/detect_mathlib.sh",
+    "http_status": "200",
+    "curl_exit_code": 0,
+    "checked_utc": "2026-11-24T16:05:34.316540+00:00",
+    "content_sha256": "993c0498475602d1f10f89abc19d9e1c1b610148bc8f09c93f4ddabd1f646d61"
+  },
+  "lake_build.sh": {
+    "url": "https://raw.githubusercontent.com/leanprover/lean-action/38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9/scripts/lake_build.sh",
+    "http_status": "200",
+    "curl_exit_code": 0,
+    "checked_utc": "2026-11-24T16:05:34.321868+00:00",
+    "content_sha256": "033cf29f0f3030d7dcf2d6934e118f3836fdffb5a415189eb45c9d9cd40cf35b"
+  }
+}
