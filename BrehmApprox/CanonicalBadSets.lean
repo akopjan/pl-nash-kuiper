@@ -70,7 +70,7 @@ lemma isClosed_affineSpan_diff_intrinsicInterior (A : Set E) :
       intro hpint
       exact hpnot (mem_intrinsicInterior.mpr ⟨⟨p, hpF⟩, hpint, rfl⟩)
   rw [← himage]
-  exact (affineSpan ℝ A).isClosed_of_finiteDimensional.isClosedEmbedding_subtypeVal.isClosedMap B hB
+  exact (affineSpan ℝ A).closed_of_finiteDimensional.isClosedEmbedding_subtypeVal.isClosedMap B hB
 
 lemma isClosed_canonicalAffineFace_diff_intrinsicInterior (A : Set E) :
     IsClosed ((canonicalAffineFace A : Set E) \ intrinsicInterior ℝ A) := by
