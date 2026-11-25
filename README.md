@@ -37,8 +37,8 @@ theorem akopyan_pl_nash_kuiper (κ : Geometry) {d m n : ℕ}
 ## Verification
 
 ### Prerequisites
-- Lean 4 toolchain `leanprover/lean4:v4.36.0` ([`lean-toolchain`](lean-toolchain))
-- Mathlib `v4.36.0` ([`lake-manifest.json`](lake-manifest.json))
+- Lean 4 toolchain `leanprover/lean4:v4.36.0-rc2` ([`lean-toolchain`](lean-toolchain))
+- Mathlib `v4.36.0-rc2` ([`lake-manifest.json`](lake-manifest.json))
 
 ### Build & Check
 ```bash

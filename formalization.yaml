@@ -84,7 +84,7 @@ automation:
       models: ["ChatGPT"]
       framework: "AI-assisted Lean 4 formalization"
       tool_setup: >-
-        Formalization and proof development in Lean 4.36.0 with Mathlib
+        Formalization and proof development in Lean 4 with Mathlib
         assisted by ChatGPT.
 
 review:
