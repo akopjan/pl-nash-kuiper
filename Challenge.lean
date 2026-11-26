@@ -1,6 +1,9 @@
 module
 
-public import Mathlib
+public import Mathlib.Analysis.Convex.SimplicialComplex.Basic
+public import Mathlib.Analysis.InnerProductSpace.PiL2
+public import Mathlib.Analysis.SpecialFunctions.Arcosh
+public import Mathlib.Geometry.Euclidean.Angle.Unoriented.Basic
 
 /-!
 # Akopyan's PL Nash--Kuiper--Gromov theorem

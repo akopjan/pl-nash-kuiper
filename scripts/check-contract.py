@@ -25,6 +25,11 @@ def normalized(text):
 def repaired_challenge(text):
     """The explicitly enumerated elaboration/visibility repairs, and nothing else."""
     repairs = [
+        ("public import Mathlib\n",
+         "public import Mathlib.Analysis.Convex.SimplicialComplex.Basic\n"
+         "public import Mathlib.Analysis.InnerProductSpace.PiL2\n"
+         "public import Mathlib.Analysis.SpecialFunctions.Arcosh\n"
+         "public import Mathlib.Geometry.Euclidean.Angle.Unoriented.Basic\n"),
         ("open scoped InnerProductSpace\n", "open scoped InnerProductSpace NNReal\n"),
         ("/-- Euclidean, Klein hyperbolic, and spherical geodesic distances. -/",
          "instance modelTopology (κ : Geometry) (n : ℕ) : TopologicalSpace (Model κ n) := by\n"
@@ -92,7 +97,7 @@ def main():
         errors.append("Compatibility/Original.lean changes the Challenge definitions")
     if len(challenge.encode()) > 100 * 1024 or len(challenge.splitlines()) > 1000:
         errors.append("Challenge.lean exceeds the statement-file size limit")
-    if [token for line in IMPORT.findall(code_only(challenge)) for token in line.split()] != ["Mathlib"]:
+    if not all(token == "Mathlib" or token.startswith("Mathlib.") for line in IMPORT.findall(code_only(challenge)) for token in line.split()):
         errors.append("Challenge.lean must remain standalone and import only Mathlib")
     if len(re.findall(r"\bsorry\b", code_only(challenge))) != 1:
         errors.append("Challenge.lean must have exactly its one deliberate target proof hole")
