@@ -1,2 +1,0 @@
-Could not find native implementation of external declaration 'LeanExport.parseStream' (symbols 'l_LeanExport_parseStream___boxed' or 'l_LeanExport_parseStream').
-For declarations from `Init`, `Std`, or `Lean`, you need to set `supportInterpreter := true` in the relevant `lean_exe` statement in your `lakefile.lean`.

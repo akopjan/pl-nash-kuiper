@@ -2,23 +2,23 @@
 
 ## Public statements
 
-The mathematical interface is `Challenge.lean`. It imports only Mathlib and
-contains the original model metrics, geometric definitions, and the single
-target theorem `PLGeometry.akopyan_pl_nash_kuiper`.
+The mathematical interface is `Challenge.lean`. It contains the model metrics,
+geometric definitions, and the single target theorem
+`PLGeometry.akopyan_pl_nash_kuiper`.
 
 Keep the concrete definitions synchronized with `Compatibility/Original.lean`.
-The archive's definitions live in the separate `ArchivePLGeometry` namespace;
-their connection to the original definitions must be proved in the
-compatibility modules. Comparator checks the elaborated original target and
-all definitions on which it depends. Keep the sole target in `comparator.json`
-unchanged and keep `definition_names` empty.
+The internal geometric library modules live in `BrehmApprox/` and `PLGeometry/`
+(under the `ArchivePLGeometry` namespace), and `Compatibility/` connects them
+to the definitions in `Challenge.lean`. Comparator checks the elaborated target
+and all definitions on which it depends. Keep the sole target in
+`comparator.json` unchanged and keep `definition_names` empty.
 
-The public approximation theorem quantifies over the original finite
-geometric polyhedra, including empty and disconnected spaces, and permits
-`d ≤ n`. The protected-net and finite-folding constructions belong inside
-its proof. The spherical hypothesis is the original alternative between
-uniform strict shortness and containment in an open hemisphere. Preserve
-the original theorem docstring as well as its signature.
+The public approximation theorem quantifies over finite geometric polyhedra,
+including empty and disconnected spaces, and permits `d ≤ n`. The protected-net
+and finite-folding constructions belong inside its proof. The spherical
+hypothesis is the alternative between uniform strict shortness and containment
+in an open hemisphere. Preserve the original theorem docstring as well as its
+signature.
 
 ## Proof checks
 
@@ -43,17 +43,13 @@ submitting a revision:
 ./scripts/verify-comparator.sh
 ```
 
-The CI workflow runs these checks and validates the publication metadata.
-The metadata job requires the owner-supplied authorship and licence fields
-listed in `PUBLICATION.md`; these have not been fabricated for this archive.
-Logs are evidence of the recorded source revision; regenerate the source-hash
-manifest whenever the distributed files change.
+The CI workflow runs these checks and validates `formalization.yaml` via
+`scripts/check-publication.py`.
 
-## Documentation and metadata
+## Documentation, authorship, and licensing
 
-Keep public documentation and comments in English. Update the proof guide
-when a construction changes. Maintain the actual scope, sources, automation
-provenance, axiom list, and review status in `formalization.yaml`.
-Authorship, maintainer details, and the project licence must be supplied by
-the responsible people. Dependency and vendored-file notices are kept in
-`THIRD_PARTY_NOTICES.md`.
+Keep public documentation and comments in English. Maintain the actual scope,
+sources, automation provenance, axiom list, and review status in
+`formalization.yaml`. The repository is authored and maintained by Arseniy
+Akopyan and distributed under the Apache License 2.0 (`LICENSE`); third-party
+notices are recorded in `THIRD_PARTY_NOTICES.md`.

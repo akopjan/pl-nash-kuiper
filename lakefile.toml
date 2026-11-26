@@ -1,6 +1,6 @@
-name = "akopyan_palomar_transfer"
+name = "pl_nash_kuiper"
 version = "0.1.0"
-defaultTargets = ["BrehmApprox", "PLGeometry", "Compatibility", "Challenge", "Solution", "ArchiveSolution", "Compatibility.GeometricRefinement", "Compatibility.PLContinuity"]
+defaultTargets = ["BrehmApprox", "PLGeometry", "Compatibility", "Challenge", "Solution", "Compatibility.GeometricRefinement", "Compatibility.PLContinuity"]
 
 [[lean_lib]]
 name = "BrehmApprox"
@@ -10,10 +10,6 @@ name = "PLGeometry"
 
 [[lean_lib]]
 name = "Compatibility"
-
-[[lean_lib]]
-name = "ArchiveSolution"
-roots = ["ArchiveSolution"]
 
 [[lean_lib]]
 name = "Challenge"

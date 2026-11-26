@@ -40,12 +40,14 @@ sources:
     type: "article"
     location: "Mathematical Notes 84 (2008), 725–728"
     relationship: "formalizes"
+    author_endorsement: "participated"
   - title: "A PL-analogue of the Nash–Kuiper theorem"
     authors: ["Arseniy V. Akopyan"]
     id: "https://www.moebiuscontest.ru/files/2007/akopyan.pdf"
     type: "preprint"
     location: "2007"
     relationship: "background"
+    author_endorsement: "participated"
   - title: "Lectures on piecewise distance preserving maps"
     authors: ["Anton Petrunin", "Allan Yashinski"]
     id: "arxiv:1405.6606v3"
@@ -81,11 +83,18 @@ status:
 automation:
   methods:
     - method: "agent"
-      models: ["ChatGPT"]
+      models: ["ChatGPT", "Gemini"]
       framework: "AI-assisted Lean 4 formalization"
       tool_setup: >-
-        Formalization and proof development in Lean 4 with Mathlib
-        assisted by ChatGPT.
+        Formalization and proof development across all project modules
+        (BrehmApprox, PLGeometry, Compatibility, Challenge, and Solution) in
+        Lean 4 with Mathlib, directed by Arseniy Akopyan and assisted by
+        ChatGPT and Gemini.
+  notes: >-
+    Arseniy Akopyan conceived and directed the formalization project and serves
+    as the responsible maintainer for the repository; Lean 4 proof modules and
+    repository verification/packaging configuration were developed with the
+    assistance of ChatGPT and Gemini.
 
 review:
   status: "self-assessed"

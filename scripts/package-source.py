@@ -30,7 +30,7 @@ def main() -> int:
     files = sorted(path for path in ROOT.rglob('*') if included(path))
     with zipfile.ZipFile(output, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
         for path in files:
-            archive.write(path, Path('akopyan_palomar_transfer') / path.relative_to(ROOT))
+            archive.write(path, Path('pl_nash_kuiper') / path.relative_to(ROOT))
     with zipfile.ZipFile(output) as archive:
         corrupt = archive.testzip()
         if corrupt is not None:

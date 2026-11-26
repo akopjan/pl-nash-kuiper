@@ -9,7 +9,8 @@ lies in an open hemisphere.
 
 This repository formalizes the PL analogue of the Nash–Kuiper–Gromov theorem
 (Akopyan, 2010, Theorems 3.7, 3.17, and 3.18) in Lean 4, developed by
-Arseniy Akopyan with the assistance of ChatGPT.
+Arseniy Akopyan with the assistance of ChatGPT and Gemini, and released under
+the [Apache-2.0](LICENSE) license.
 
 ---
 

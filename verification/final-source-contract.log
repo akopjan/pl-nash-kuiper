@@ -1,4 +1,0 @@
-Source contract passed: 340 proof-side Lean files; exact original target PLGeometry.akopyan_pl_nash_kuiper.
-Original definitions and final target signature are preserved; no proof holes or new axioms found.
-The target theorem documentation matches the original Challenge exactly.
-Original reference SHA256: a273a7a2032317b02316776d38d7739a5cb5aac0600d0b81ba788fc31cedced3

@@ -1,10 +1,11 @@
 # Proof guide
 
 The public theorem is `PLGeometry.akopyan_pl_nash_kuiper`.
-`Challenge.lean` contains its original embedded-polyhedron formulation;
-`Solution.lean` proves that same statement. The completed geometric library
-is retained in namespace `ArchivePLGeometry`. The `Compatibility/` modules
-prove the passage between the original objects and this library.
+`Challenge.lean` contains its embedded-polyhedron formulation;
+`Solution.lean` proves that same statement. The core geometric library lives in
+`BrehmApprox/` and `PLGeometry/` (internal namespace `ArchivePLGeometry`), and
+the `Compatibility/` modules connect the definitions in `Challenge.lean` to
+this library.
 
 ## The original unified theorem
 
@@ -48,7 +49,7 @@ models preserves the numerical approximation error.
 
 The original charts are not assumed affine. `SourceIndependence.lean`,
 `ModelHemisphere.lean`, and `SourceVertices.lean` derive the vertex
-independence required by the archive. A dependence among image vertices
+independence required by the geometric library. A dependence among image vertices
 would give intersecting hulls of disjoint source faces, contradicting chart
 injectivity. For a
 spherical chart, an antipodal image pair is impossible: its positive
@@ -66,7 +67,7 @@ length. `SourceDistance.lean`, `SourceShortness.lean`, and
 under charted refinement. No equality between an arbitrary original chart
 metric and the global intrinsic metric is assumed.
 
-The archive's small-folding theorem gives a finite charted refinement and a
+The small-folding theorem gives a finite charted refinement and a
 continuous map that is isometric on each refined cell. `IntrinsicMetric.lean`
 uses it to construct a genuine chain metric on each connected cell
 component. A compact-star argument separates distinct points; finite
@@ -79,7 +80,7 @@ properties.
 `ConnectedApproximation.lean` and `ComponentApproximation.lean` apply the
 completed approximation theorems to these metric components. The original
 strict spherical constant restricts unchanged to every component; an
-original open hemisphere satisfies the archive's closed-hemisphere
+original open hemisphere satisfies the closed-hemisphere
 alternative. A finite refinement compatible with the initial folded cells
 is obtained from ambient model motions on cell intersections and their
 finite polyhedral arrangement; `SetRigidity.lean`, `RefinedPL.lean`, and
@@ -143,11 +144,12 @@ continuous globally. Compactness of $P$ then makes this bijection a
 homeomorphism. These are the separation and topology arguments formalized
 in `Compatibility/IntrinsicMetric.lean`.
 
-## The retained geometric library
+## The core geometric library
 
-The remainder of this guide describes the completed library in namespace
-`ArchivePLGeometry`. Its metric models use Euclidean distance, spherical
-angular distance, and the hyperboloid distance.
+The remainder of this guide describes the geometric library in `BrehmApprox/`
+and `PLGeometry/` (internal namespace `ArchivePLGeometry`). Its metric models
+use Euclidean distance, spherical angular distance, and the hyperboloid
+distance.
 
 ## Geodesic simplices and PL-isometries
 
@@ -194,7 +196,7 @@ short-data problem into its Euclidean counterpart. The inverse construction
 produces Lorentz motions on hyperbolic polyhedral regions. Their refinement
 gives the required hyperbolic geodesic triangulation.
 
-The archive's extension conclusion is
+The extension theorem declaration is
 `ArchivePLGeometry.brehm_akopyan_tarasov`. The three
 model-level extension theorems are `BrehmApprox.euclideanBrehm`,
 `BrehmApprox.sphericalBrehm`, and `BrehmApprox.hyperbolicBrehm`.
@@ -281,7 +283,7 @@ dimension.
 
 In the spherical case the argument applies when $f$ has one global
 Lipschitz constant below one, or when its image is contained in a closed
-hemisphere. These alternatives are stated explicitly in the archive's
+hemisphere. These alternatives are stated explicitly in the internal
 spherical theorem.
 
 The final declarations are `ArchivePLGeometry.pl_nash_kuiper_euclidean`,
@@ -293,8 +295,6 @@ folding, protected net, angular triangulation, or geometric extension axiom.
 
 The intended proof dependencies are only `propext`, `Classical.choice`, and
 `Quot.sound`. `AxiomAudit.lean` prints the actual transitive dependencies of
-the public declarations and the principal constructions. `verify.py` records
-real build and audit exit codes. Palomar Comparator separately checks that
-the Solution proves the Challenge statements and replays the exported proof.
-The precise results of the checks performed for a distributed archive are
-recorded in `verification/`.
+the public declarations and the principal constructions. `verify.py` runs the
+local build and axiom checks, and Palomar Comparator checks that the Solution
+proves the Challenge statement and replays the exported proof.

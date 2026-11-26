@@ -1,8 +1,0 @@
-lean-version.txt: exit 0
-source-policy.log: exit 0
-source-contract.log: exit 0
-build.log: exit 0
-axioms.log: exit 0
-solution-check.log: exit 0
-Build and all four theorem dependency audits passed.
-Comparator is a separate check; use --comparator on a supported Linux host.
